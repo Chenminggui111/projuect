@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="page-section-spacing scrollH">
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view class="scroll-view-item_H" wx:for="{{heroNav}}" wx:key="{{index}}">
+        <text class="{{navIndex == index ? 'navItem active' : 'navItem'}}" data-item="{{item}}" data-index="{{index}}"
+          bindtap="selectAear">{{item.text}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view id="heroList">
+    <scroll-view scroll-y="true" style="height: 1040rpx;">
+      <view class="heroItem">
+        <view class="hItem" wx:for="{{herolist}}" wx:key="{{index}}">
+          <image class="hItemimg" data-item="{{item}}" src="https:{{item.heroimg}}" bindtap="toDetail"></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

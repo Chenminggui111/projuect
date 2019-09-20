@@ -1,0 +1,9 @@
+<!--皮肤鉴赏页面-->
+<view class="container">
+    <view class="imglist">
+        <view class="item" wx:for="{{skin}}" wx:key="{{index}}">
+            <image src="https:{{item.img}}" class="itemimg" 
+            bindtap="skinInfo" data-item="{{item}}" data-index="{{index}}"/>
+        </view>
+    </view>
+</view>
